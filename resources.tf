@@ -1,6 +1,6 @@
 resource "aws_iam_policy" "existing_policy" {
-  name   = "cmtr-xv69vdlr-iam-policy"
-  
+  name = "cmtr-xv69vdlr-iam-policy"
+
   # 1. ADD THIS LINE to match the imported description
   description = "Custom role with limited permissions"
 
@@ -10,8 +10,8 @@ resource "aws_iam_policy" "existing_policy" {
     Statement = [
       {
         Action = [
-          "ec2:*",  # This must match the state
-          "s3:*"    # This must match the state
+          "ec2:*", # This must match the state
+          "s3:*"   # This must match the state
         ]
         Effect   = "Allow"
         Resource = "*"
